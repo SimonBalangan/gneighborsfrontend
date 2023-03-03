@@ -1,7 +1,7 @@
 import "./list.css";
 import Navbar from "../../components/navbar/Navbar";
 import Header from "../../components/header/Header";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { format } from "date-fns";
 import { DateRange } from "react-date-range";
@@ -22,6 +22,8 @@ const List = () => {
   const { data, loading, error } = useFetch(
     `/hotels?city=${destination}&name=${product}`);
     
+    const navigate = useNavigate();
+
 
   return (
     <div>

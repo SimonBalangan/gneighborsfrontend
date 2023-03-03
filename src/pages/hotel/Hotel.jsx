@@ -127,23 +127,14 @@ console.log(dates)
             />
           </div>
         )}
+{/* PRODUKTBESCHREIBUNG UND LOCATION + USERNAME */}
         <div className="hotelWrapper">
-          <h1 className="hotelTitle">HOTEL NAME: {data.name}</h1>
-          
-          <div className="hotelAddress">
-            <FontAwesomeIcon icon={faLocationDot} />
-            
-            <span>ADRESSE: {data.address}</span>
-          
-          </div>
+          <h1 className="hotelTitle">{data.name}</h1>
           <span className="hotelDistance">
-            
-            LOCATION DISTANCE –  {data.distance} 
-          
+            Product is –  {data.distance} m away from your location
           </span>
-          
+{/* BILDER DER PRODUKTE */}          
           <div className="hotelImages">
-            
             {data.photos?.map((photo, i) => (
               <div className="hotelImgWrapper" key={i}>
                 <img
@@ -155,26 +146,23 @@ console.log(dates)
                 />
               </div>
             ))}
-
           </div>
           <div className="hotelDetails">
             <div className="hotelDetailsTexts">
-              
-              <h1 className="hotelTitle">TITEL: {data.title}</h1>
-              
-              <p className="hotelDesc">
-                DESCRIPTION
-              </p>
-            
+              <h1 className="hotelTitle">User: {data.title}</h1>
+               <div className="hotelAddress">
+            <FontAwesomeIcon icon={faLocationDot} />
+            <span>{data.address}</span>
+           </div>
             </div>
+           
             {/* Blaue Box mit Infos */}
             <div className="hotelDetailsPrice">
-              
               <h2>
                 <b>{days} days rental</b>
               </h2>
               <button onClick={handleClick}>
-                Reserve or Book Now!
+                Reserve Now!
               </button>
             </div>
           </div>
