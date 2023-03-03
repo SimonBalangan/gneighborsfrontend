@@ -6,6 +6,7 @@ import MailList from "../../components/mailList/MailList";
 import Navbar from "../../components/navbar/Navbar";
 import PropertyList from "../../components/propertyList/PropertyList";
 import "./home.css";
+import TextContainerCity from '../../components/textContainerCity/TextContainerCity' 
 
 const Home = () => {
   return (
@@ -13,11 +14,12 @@ const Home = () => {
       <Navbar />
       <Header/>
       <div className="homeContainer">
+      <TextContainerCity/>
         <Featured/>
         <h1 className="homeTitle">Browse by property type</h1>
         <PropertyList/>
-        <h1 className="homeTitle">Homes guests love</h1>
-        <FeaturedProperties/>
+        {/* <h1 className="homeTitle">Homes guests love</h1>
+        <FeaturedProperties/> */}
         <MailList/>
         <Footer/>
       </div>

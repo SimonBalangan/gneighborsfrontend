@@ -1,42 +1,54 @@
 import "./featured.css";
+import useFetch from "../../hooks/useFetch";
 
 const Featured = () => {
+  const { data, loading, error } = useFetch(
+    
+    "/hotels/countByCity?cities=Neustadt,Altstadt,berlin"
+  );
+  
   return (
     <div className="featured">
-      <div className="featuredItem">
-        <img
-          src="https://cf.bstatic.com/xdata/images/city/max500/957801.webp?k=a969e39bcd40cdcc21786ba92826063e3cb09bf307bcfeac2aa392b838e9b7a5&o="
-          alt=""
-          className="featuredImg"
-        />
-        <div className="featuredTitles">
-          <h1>Dublin</h1>
-          <h2>123 properties</h2>
+      {loading ? (
+        'Loading please wait'
+      ) : (
+        <>
+          <div className="featuredItem">
+          <img
+            src="https://www.campus-mainz.net/fileadmin/_processed_/1/2/csm_Bild_1_b_cc1ac1390d.jpg"
+            alt=""
+            className="featuredImg"
+          />
+          <div className="featuredTitles">
+            <h1>Neustadt</h1>
+            <h2>{data[0]} members</h2>
+          </div>
         </div>
-      </div>
-      
-      <div className="featuredItem">
-        <img
-          src="https://cf.bstatic.com/xdata/images/city/max500/690334.webp?k=b99df435f06a15a1568ddd5f55d239507c0156985577681ab91274f917af6dbb&o="
-          alt=""
-          className="featuredImg"
-        />
-        <div className="featuredTitles">
-          <h1>Reno</h1>
-          <h2>533 properties</h2>
+        
+        <div className="featuredItem">
+          <img
+            src="https://image.geo.de/30149712/t/Xu/v3/w1440/r0/-/mainz-s-1080531929-jpg--85372-.jpg"
+            alt=""
+            className="featuredImg"
+          />
+          <div className="featuredTitles">
+            <h1>Altstadt</h1>
+            <h2>{data[1]} members</h2>
+          </div>
         </div>
-      </div>
-      <div className="featuredItem">
-        <img
-          src="https://cf.bstatic.com/xdata/images/city/max500/689422.webp?k=2595c93e7e067b9ba95f90713f80ba6e5fa88a66e6e55600bd27a5128808fdf2&o="
-          alt=""
-          className="featuredImg"
-        />
-        <div className="featuredTitles">
-          <h1>Austin</h1>
-          <h2>532 properties</h2>
+        <div className="featuredItem">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2gvNfBi4tSutu51qWoKWY6NGGDoBIeeYizibT1PlVrvtgwQL2LNsu2-ZKrxE3a7YwzqI&usqp=CAU"
+            alt=""
+            className="featuredImg"
+          />
+          <div className="featuredTitles">
+            <h1>Innenstadt</h1>
+            <h2>{data[2]} members</h2>
+          </div>
         </div>
-      </div>
+      </>
+      )}
     </div>
   );
 };
