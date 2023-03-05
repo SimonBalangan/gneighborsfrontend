@@ -8,14 +8,16 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navContainer">
-      <Link to='/'>
+      <Link to='/' >
         <span className="logo">GOOD NEIGHBORS</span>
       </Link>
         
       {user ? user.username : (
           <div className="navItems">
             <button className="navButton">Register</button>
-            <button className="navButton">Login</button>
+            <Link to='/login'>
+              <button className="navButton">Login</button>
+            </Link>
           </div>
         )}
       </div>

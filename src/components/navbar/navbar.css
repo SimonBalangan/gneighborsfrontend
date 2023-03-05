@@ -20,8 +20,12 @@
 
 .navButton{
   margin-left: 20px;
-  border: none;
   padding: 5px 10px;
+  background-color: #0071c2;
+  color: white;
+  font-weight: 500;
+  border: none;
+  padding: 10px;
   cursor: pointer;
-  color: #003580;
 }
+

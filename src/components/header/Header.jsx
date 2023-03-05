@@ -10,7 +10,7 @@ import { useState, useContext } from "react";
 import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { format } from "date-fns";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { SearchContext } from "../../context/SearchContext";
 import { AuthContext } from "../../context/AuthContext";
 
@@ -56,9 +56,10 @@ const Header = () => {
               Welcome to your neighborhood!
             </p>
             { !user &&
+              <Link to='/login'>
               <button className="headerBtn">
                 Sign in / Register
-              </button>
+              </button> </Link>
               }
             <div className="headerSearch">
               <div className="headerSearchItem">

@@ -4,7 +4,7 @@ import useFetch from "../../hooks/useFetch";
 const Featured = () => {
   const { data, loading, error } = useFetch(
     
-    "/hotels/countByCity?cities=Neustadt,Altstadt,berlin"
+    "/hotels/countByCity?cities=Neustadt,Altstadt,Mainz"
   );
   
   return (
@@ -43,7 +43,7 @@ const Featured = () => {
             className="featuredImg"
           />
           <div className="featuredTitles">
-            <h1>Innenstadt</h1>
+            <h1>Mainz</h1>
             <h2>{data[2]} members</h2>
           </div>
         </div>
