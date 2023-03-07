@@ -1,46 +1,38 @@
 import "./footer.css";
+import world from './world.png'
+// import logo2 from './logo2.png'
+import gnlogo1 from '../navbar/images/gnlogo1.png'
+import gnlogo2 from '../navbar/images/gnlogo2.png'
+import gnlogo3 from '../navbar/images/gnlogo3.png'
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <div className="footer">
       <div className="fLists">
-        <ul className="fList">
-          <li className="fListItem">Countries</li>
-          <li className="fListItem">Regions</li>
-          <li className="fListItem">Cities</li>
-          <li className="fListItem">Districts</li>
-          <li className="fListItem">Streets</li>
-          <li className="fListItem">ZIP Code</li>
-        </ul>
-        <ul className="fList">
-          <li className="fListItem">Tools </li>
-          <li className="fListItem">Kitchen </li>
-          <li className="fListItem">Games </li>
-          <li className="fListItem">Baby</li>
-          <li className="fListItem">Kids</li>
-          <li className="fListItem">Animals</li>
-        </ul>
-        <ul className="fList">
-        <li className="fListItem">Tools </li>
-          <li className="fListItem">Kitchen </li>
-          <li className="fListItem">Games </li>
-          <li className="fListItem">Baby</li>
-          <li className="fListItem">Kids</li>
-          <li className="fListItem">Animals</li>
-        </ul>
-        <ul className="fList">
-        <li className="fListItem">Tools </li>
-          <li className="fListItem">Kitchen </li>
-          <li className="fListItem">Games </li>
-          <li className="fListItem">Baby</li>
-          <li className="fListItem">Kids</li>
-          <li className="fListItem">Animals</li>
-        </ul>
+      <Link
+          to='/'
+          >
+          
+          <img
+            src={gnlogo1}
+            className='logo-footer'
+          />
+           {/* <img
+            src={logo2}
+            className='logo'
+          /> */}
+          </Link>
+       
         <ul className="fList">
           <li className="fListItem">Curtomer Service</li>
           <li className="fListItem">Partner Help</li>
           <li className="fListItem">Careers</li>
           <li className="fListItem">Sustainability</li>
+          
+        </ul>
+        <ul className="fList">
+          
           <li className="fListItem">Press center</li>
           <li className="fListItem">Safety Resource Center</li>
           <li className="fListItem">Investor relations</li>

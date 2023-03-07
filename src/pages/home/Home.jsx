@@ -8,9 +8,11 @@ import PropertyList from "../../components/propertyList/PropertyList";
 import "./home.css";
 import TextContainerCity from '../../components/textContainerCity/TextContainerCity' 
 import HowTo from "../../components/howto/Howto";
-
-
-
+import Carousel from "../../components/borrow/Borrow";
+import Test from "../../components/test/Test";
+import Borrow from "../../components/borrow/Borrow";
+import Lend from "../../components/lend/Lend";
+import Why from '../../components/why/Why'
 
 const Home = () => {
   return (
@@ -20,14 +22,19 @@ const Home = () => {
       <div className="homeContainer">
       
         
-      <TextContainerCity/>
+        <TextContainerCity/>
         <Featured/>
-        <h1 className="homeTitle">Browse by property type</h1>
-        <HowTo/>
-        {/* <PropertyList/> */}
+        {/* <Test/> */}
+       <Borrow/>
+       <Lend/>
+        {/* <HowTo/> */}
+        
         {/* <h1 className="homeTitle">Homes guests love</h1>
         <FeaturedProperties/> */}
-        <MailList/>
+        {/* <MailList/> */}
+        <Why/>
+  
+        <PropertyList/>
         <Footer/>
       </div>
     </div>

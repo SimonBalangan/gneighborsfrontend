@@ -20,8 +20,9 @@ const Featured = () => {
             className="featuredImg"
           />
           <div className="featuredTitles">
+            <h2>{data[0]} members in the</h2>
             <h1>Neustadt</h1>
-            <h2>{data[0]} members</h2>
+            
           </div>
         </div>
         

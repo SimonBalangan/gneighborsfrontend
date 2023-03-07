@@ -1,15 +1,21 @@
 .header {
-  background-color: crimson;
+  background-image: url(./images/bgHeader.jpg);
+  background-size: cover;
+  width:100%;
   color: white;
   display: flex;
   justify-content: center;
   position: relative;
+  
+  
+  
 }
 
 .headerContainer {
   width: 100%;
   max-width: 1024px;
   margin: 20px 0px 100px 0px;
+  min-height: 240px;
 }
 
 .headerContainer.listMode {
@@ -39,23 +45,28 @@
 }
 
 .headerBtn {
-  background-color: #0071c2;
+  background:linear-gradient(rgba(0, 250, 83, 0.731),transparent);
+  background-color:rgb(120, 40, 250);
   color: white;
   font-weight: 500;
+  font-size: 22px;
   border: none;
-  padding: 10px;
+  padding: 8px 25px;
   cursor: pointer;
+  border-radius: 6px;
+  /* background-color: #0071c2; */
 }
 
 .headerSearch {
+  /* font-size: 22px; */
   height: 30px;
   background-color: white;
-  border: 3px solid #febb02;
+  border: 4px solid #febb02;
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 10px 0px;
-  border-radius: 5px;
+  border-radius: 8px;
   position: absolute;
   bottom: -25px;
   width: 100%;
@@ -63,7 +74,7 @@
 }
 
 .headerIcon {
-  color: lightgray;
+  color: rgb(120, 40, 250);
 }
 
 .headerSearchItem {
@@ -75,17 +86,21 @@
 .headerSearchInput {
   border: none;
   outline: none;
+  font-size: 22px;
 }
 
 .headerSearchText {
-  color: lightgray;
+  color: rgb(56, 56, 56);
   cursor: pointer;
+  font-size: 18px;
+  
 }
 
 .date {
   position: absolute;
   top: 50px;
   z-index: 2;
+  
 }
 
 .options {
@@ -125,4 +140,9 @@
 
 .optionCounterButton:disabled {
   cursor: not-allowed;
+}
+
+.logo{
+  max-width: 255px;
+  
 }

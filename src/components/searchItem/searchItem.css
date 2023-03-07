@@ -1,11 +1,12 @@
 .searchItem {
-  border: 1px solid lightgray;
+  border: 2px solid #febb02;
   padding: 10px;
   border-radius: 5px;
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  margin-top: 40px;
+  justify-content:space-around;
+  /* gap: 230px; */
+  margin-top: 8px;
+  margin-bottom: 5px;
 }
 
 .siImg {
@@ -19,15 +20,24 @@
   flex-direction: column;
   gap: 10px;
   flex: 2;
+  padding-right: 400px;
+  margin: 30px 0 0 30px;
+  
 }
 
 .siTitle {
-  font-size: 20px;
+  font-size: 40px;
+  color: #0071c2;
+}
+
+.siTitle2 {
+  font-size: 30px !important;
   color: #0071c2;
 }
 
 .siDistance {
-  font-size: 12px;
+  font-size: 15px;
+  
 }
 
 .siTaxiOp {
@@ -87,6 +97,7 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+  padding: 50px;
 }
 
 .siPrice{
@@ -99,11 +110,13 @@
 }
 
 .siCheckButton{
-  background-color: #0071c2;
+  background:linear-gradient(rgba(0, 250, 83, 0.731),transparent);
+  background-color:rgb(120, 40, 250);
   color: white;
-  font-weight: bold;
-  padding: 10px 5px;
+  font-weight: 500;
+  font-size: 22px;
   border: none;
+  padding: 25px 25px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 6px;
 }

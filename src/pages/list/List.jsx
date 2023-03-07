@@ -7,7 +7,7 @@ import { format } from "date-fns";
 import { DateRange } from "react-date-range";
 import SearchItem from "../../components/searchItem/SearchItem";
 import useFetch from '../../hooks/useFetch';
-
+import Footer from "../../components/footer/Footer";
 
 const List = () => {
   const location = useLocation();
@@ -26,7 +26,7 @@ const List = () => {
 
 
   return (
-    <div>
+    <div className="list-container">
       <Navbar />
       <Header />
           <div className="listResult">
@@ -34,12 +34,14 @@ const List = () => {
               "loading"
             ) : (
               <>
+              {/* Hier wird die Item-Liste geladen */}
                 {data.map((item) => (
                   <SearchItem item={item} key={item._id} />
                 ))}
               </>
             )}
           </div>
+      <Footer/>
     </div>
   );
 };

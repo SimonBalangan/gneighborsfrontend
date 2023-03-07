@@ -1,9 +1,9 @@
-.navbar{
+/* .navbar{
   height: 50px;
-  background-color: crimson;
+  background-color: #dc143c50;
   display: flex;
   justify-content: center;
-}
+} */
 
 .navContainer{
   width: 100%;
@@ -12,6 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 10px;
 }
 
 .logo{
@@ -21,11 +22,40 @@
 .navButton{
   margin-left: 20px;
   padding: 5px 10px;
-  background-color: #0071c2;
+  background:linear-gradient(rgba(0, 250, 83, 0.731),transparent);
+  background-color:rgb(120, 40, 250); 
   color: white;
   font-weight: 500;
   border: none;
   padding: 10px;
   cursor: pointer;
+  border-radius: 6px;
 }
 
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem 2rem;
+  overflow: hidden;
+  z-index: 500;
+  width: 100%; 
+  margin: auto;
+  top: 0;
+  border-bottom: solid 1px var(--primary-color);
+  opacity: 0.9;
+
+  position: fixed;
+  top: 0;
+
+  /* box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25); */
+  box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.8),
+    -12px 0 8px -4px rgba(31, 73, 125, 0.8);
+  box-shadow: 9 9px 0px 0px rgba(255, 255, 255, 0.563), 0 -9px 0px 0px rgba(255, 255, 255, 0.417),
+    12px 0 15px -4px rgba(31, 73, 125, 0.8),
+    -12px 0 15px -4px rgba(31, 73, 125, 0.8);
+}
+
+    /* background:linear-gradient(rgba(0, 250, 83, 0.731),transparent);
+    background-color:rgb(120, 40, 250);  */

@@ -30,7 +30,7 @@ const Hotel = () => {
   const [openModal, setOpenModal] = useState(false);
 
   const { data, loading, error } = useFetch(`/hotels/find/${id}`)
-
+  // const { data, loading, error } = useFetch(`/products/find/${id}`)
 const { user } = useContext(AuthContext)
 
 const { dates } = useContext(SearchContext);
@@ -50,26 +50,6 @@ const MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24;
 
 console.log(dates)
 
-  // const photos = [
-  //   {
-  //     src: "https://www.lidl.de/assets/gcp1bfb3bc3d9c540a5bbc8f3a7f48eb41f.jpeg",
-  //   },
-  //   {
-  //     src: "https://www.lidl.de/assets/gcp1bfb3bc3d9c540a5bbc8f3a7f48eb41f.jpeg",
-  //   },
-  //   {
-  //     src: "https://www.lidl.de/assets/gcp1bfb3bc3d9c540a5bbc8f3a7f48eb41f.jpeg",
-  //   },
-  //   {
-  //     src: "https://www.lidl.de/assets/gcp1bfb3bc3d9c540a5bbc8f3a7f48eb41f.jpeg",
-  //   },
-  //   {
-  //     src: "https://www.lidl.de/assets/gcp1bfb3bc3d9c540a5bbc8f3a7f48eb41f.jpeg",
-  //   },
-  //   {
-  //     src: "https://www.lidl.de/assets/gcp1bfb3bc3d9c540a5bbc8f3a7f48eb41f.jpeg",
-  //   },
-  // ];
 
   const handleOpen = (i) => {
     setSlideNumber(i);
@@ -131,7 +111,7 @@ console.log(dates)
         <div className="hotelWrapper">
           <h1 className="hotelTitle">{data.name}</h1>
           <span className="hotelDistance">
-            Product is –  {data.distance} m away from your location
+             is –  {data.distance} m away from your location
           </span>
 {/* BILDER DER PRODUKTE */}          
           <div className="hotelImages">
@@ -149,12 +129,12 @@ console.log(dates)
           </div>
           <div className="hotelDetails">
             <div className="hotelDetailsTexts">
-              <h1 className="hotelTitle">User: {data.title}</h1>
-               <div className="hotelAddress">
-            <FontAwesomeIcon icon={faLocationDot} />
-            <span>{data.address}</span>
-           </div>
-            </div>
+              <h1 className="hotelTitle">{data.title}</h1>
+                <div className="hotelAddress">
+                  <FontAwesomeIcon icon={faLocationDot} />
+                  <span className="hotelAddress">{data.address}</span>
+                </div>
+          </div>
            
             {/* Blaue Box mit Infos */}
             <div className="hotelDetailsPrice">
@@ -167,7 +147,6 @@ console.log(dates)
             </div>
           </div>
         </div>
-        <MailList />
         <Footer />
       </div>
       )}

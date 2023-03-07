@@ -13,6 +13,9 @@ import { format } from "date-fns";
 import { useNavigate, Link } from "react-router-dom";
 import { SearchContext } from "../../context/SearchContext";
 import { AuthContext } from "../../context/AuthContext";
+import neighbors from './images/neighbors.png'
+import bgHeader from './images/bgHeader.jpg'
+
 
 const Header = () => {
   const [product, setProduct] = useState("");
@@ -39,6 +42,7 @@ const Header = () => {
     
     dispatch({ type: "NEW_SEARCH", payload: { product, destination, dates } });
     navigate("/hotels", { state: { product, destination, dates } });
+    // navigate("/products", { state: { product, destination, dates } });
   };
 
  
@@ -48,19 +52,26 @@ const Header = () => {
 
   return (
     <div className="header">
+     
       <div className="headerContainer">
-            <h1 className="headerTitle">
-              GOOD NEIGHBORS
-            </h1>
-            <p className="headerDesc">
+          {/* <Link
+          to='/'
+          >
+          <img
+            src={neighbors}
+            className='logo'
+          />
+           
+          </Link> */}
+            {/* <p className="headerDesc">
               Welcome to your neighborhood!
-            </p>
-            { !user &&
+            </p> */}
+            {/* { !user &&
               <Link to='/login'>
               <button className="headerBtn">
                 Sign in / Register
               </button> </Link>
-              }
+              } */}
             <div className="headerSearch">
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faQuestion} className="headerIcon" />

@@ -10,8 +10,9 @@
   max-width: 1024px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  /* gap: 10px; */
   position: relative;
+  
 }
 
 .bookNow {
@@ -28,10 +29,12 @@
 }
 
 .hotelTitle {
-  font-size: 24px;
+    font-size: 20px ;
+    color: #0071c2;
 }
 
 .hotelAddress {
+  color: black !important;
   font-size: 12px;
   display: flex;
   align-items: center;
@@ -39,8 +42,9 @@
 }
 
 .hotelDistance {
-  color: #0071c2;
+  color: black !important;
   font-weight: 500;
+  font-size: 12px;
 }
 
 .hotelPriceHighlight {

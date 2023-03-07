@@ -1,23 +1,43 @@
 .footer{
   width: 100%;
-  width: 1024px;
-  font-size: 12px;
+  margin-top: 50px;
+  padding-top: 50px;
+  font-size: 14px;
+  /* background-color: #0071c2; */
+  align-items: center;
+  justify-content: center;
+  background:linear-gradient(rgba(0, 250, 83, 0.731),transparent);
+  background-color:rgb(120, 40, 250) /*this your primary color*/
 }
 
 .fLists{
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 50px;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 15px;
+
 }
 
 .fList{
   list-style: none;
-  padding: 0;
+  margin-right: 40px;
+  font-size: 20px;
+
 }
 
 .fListItem{
   margin-bottom: 10px;
-  color: #003580;
+  color: #ffffff;
   cursor: pointer;
 }
+.fText{
+  color: aliceblue;
+  padding: 20px;
+  
+}
+
+/* .logo-footer{
+  padding-top: 100px;
+  font-weight: 500;
+} */

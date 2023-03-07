@@ -8,7 +8,7 @@ import Hotel from "./pages/hotel/Hotel";
 import List from "./pages/list/List";
 import Login from "./pages/login/Login";
 import SinglePage from "./pages/singlepage/SinglePage";
-
+import './index.css'
 import {Button}  from 'react-bootstrap'
 
 function App() {
@@ -17,8 +17,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/hotels" element={<List/>}/>
+        {/* <Route path="/products" element={<List/>}/> */}
         {/* <Route path="/products" element={<SinglePage/>}/> */}
         <Route path="/hotels/:id" element={<Hotel/>}/>
+        {/* <Route path="/products/:id" element={<Hotel/>}/> */}
         <Route path="/login" element={<Login/>}/>
         {/* <Route path="/hotels/:id" element={<SinglePage/>}/> */}
       </Routes>
