@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Hotel from "./pages/hotel/Hotel";
+// import Hotel2 from "./pages/hotel/Hotel2";
 import List from "./pages/list/List";
 import Login from "./pages/login/Login";
 import SinglePage from "./pages/singlepage/SinglePage";

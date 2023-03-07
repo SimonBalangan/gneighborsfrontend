@@ -77,7 +77,7 @@ const Header = () => {
                 <FontAwesomeIcon icon={faQuestion} className="headerIcon" />
                 <input
                   type="text"
-                  placeholder="What are u looking for?"
+                  placeholder="What are you looking for?"
                   className="headerSearchInput"
                   onChange={(e) => setProduct(e.target.value)}
                 />

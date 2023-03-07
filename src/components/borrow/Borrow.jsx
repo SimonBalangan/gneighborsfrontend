@@ -5,7 +5,7 @@ const Borrow = () => {
   return (
   <div className="container-box">
   <h1 className='howDoes'>How does Good Neighbors work?</h1>
-        <strong><p className='small-title'>HOW TO BORROW</p></strong>
+        <strong><h3 className='small-title'>HOW TO BORROW</h3></strong>
             <div className='slide-content'>
                 <div className='card-wrapper'>
                 
@@ -19,7 +19,7 @@ const Borrow = () => {
                                 </div>
                         <div className='card-content'>
                             <h2 className='name'>1. Search</h2>
-                            <p className='description'>Search for a product near you</p>
+                            <h3 className='description'>Search for a product near you</h3>
 
                         </div>
 
@@ -35,7 +35,7 @@ const Borrow = () => {
                                 </div>
                         <div className='card-content'>
                             <h2 className='name'>2. Verify</h2>
-                            <p className='description'>Verify your profile to become part of the sharing community</p>
+                            <h3 className='description'>Verify your profile to become part of the sharing community</h3>
 
                         </div>
 
@@ -52,7 +52,7 @@ const Borrow = () => {
                                 </div>
                         <div className='card-content'>
                             <h2 className='name'>3. Request</h2>
-                            <p className='description'>Request with a neighbor, book and see the availability</p>
+                            <h3 className='description'>Request with a neighbor, book and see the availability</h3>
 
                         </div>
 
@@ -69,7 +69,7 @@ const Borrow = () => {
                                 </div>
                         <div className='card-content'>
                             <h2 className='name'>4. Enjoy</h2>
-                            <p className='description'>Make use of it, enjoy and bring it back on the arranged time</p>
+                            <h3 className='description'>Make use of it, enjoy and bring it back on the arranged time</h3>
 
                         </div>
 

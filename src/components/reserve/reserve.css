@@ -11,9 +11,11 @@
 }
 
 .rContainer {
-  background-color: white;
-  padding: 20px;
+  background:linear-gradient(rgba(231, 236, 233, 0.731),transparent);
+  background-color:rgb(127, 127, 159);
+  padding: 42px;
   position: relative;
+  font-size: 30px;
 }
 
 .rClose {
@@ -38,6 +40,7 @@
 
 .rTitle {
   font-weight: 500;
+  color: #0071c2;
 }
 
 .rDesc {
@@ -68,11 +71,19 @@
 .rButton {
   border: none;
   padding: 10px 20px;
-  background-color: #0071c2;
   color: white;
+  background:linear-gradient(rgba(0, 250, 83, 0.731),transparent);
+  background-color:rgb(120, 40, 250);
+  
   font-weight: bold;
   cursor: pointer;
   border-radius: 5px;
   width: 100%;
   margin-top: 20px;
+}
+
+.checkbox{
+  width: 42px;
+  height: 42px;
+  
 }

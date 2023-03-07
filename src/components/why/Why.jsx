@@ -19,7 +19,7 @@ const Why = () => {
                                 </div>
                         <div className='card-content'>
                             <h2 className='name2'>Save & Earn</h2>
-                            <p className='description2'>On things you only need every now and then</p>
+                            <h3 className='description2'>On things you only need every now and then</h3>
 
                         </div>
 
@@ -35,7 +35,7 @@ const Why = () => {
                                 </div>
                         <div className='card-content'>
                             <h2 className='name2'>Support</h2>
-                            <p className='description2'>your neighbourhood. Sharing feels good!</p>
+                            <h3 className='description2'>your neighbourhood. Sharing feels good!</h3>
 
                         </div>
 
@@ -52,7 +52,7 @@ const Why = () => {
                                 </div>
                         <div className='card-content'>
                             <h2 className='name2'>Save the Planet</h2>
-                            <p className='description2'>Do more with less. And save raw materials, CO2 and waste</p>
+                            <h3 className='description2'>Do more with less. And save raw materials, CO2 and waste</h3>
 
                         </div>
 
@@ -69,7 +69,7 @@ const Why = () => {
                                 </div>
                         <div className='card-content'>
                             <h2 className='name2'>Share Safely</h2>
-                            <p className='description2'>With guarantee against damage or loss</p>
+                            <h3 className='description2'>With guarantee against damage or loss</h3>
 
                         </div>
 

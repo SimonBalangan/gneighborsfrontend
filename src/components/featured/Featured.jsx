@@ -20,8 +20,9 @@ const Featured = () => {
             className="featuredImg"
           />
           <div className="featuredTitles">
-            <h2>{data[0]} members in the</h2>
-            <h1>Neustadt</h1>
+            <strong><h1>Neustadt</h1></strong>
+            <h2>{data[0]} members</h2>
+            
             
           </div>
         </div>
@@ -33,18 +34,18 @@ const Featured = () => {
             className="featuredImg"
           />
           <div className="featuredTitles">
-            <h1>Altstadt</h1>
+           <strong> <h1>Altstadt</h1></strong>
             <h2>{data[1]} members</h2>
           </div>
         </div>
         <div className="featuredItem">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2gvNfBi4tSutu51qWoKWY6NGGDoBIeeYizibT1PlVrvtgwQL2LNsu2-ZKrxE3a7YwzqI&usqp=CAU"
+            src="https://mainz-citymanagement.de/wp-content/uploads/2021/06/Verein.jpg"
             alt=""
             className="featuredImg"
           />
           <div className="featuredTitles">
-            <h1>Mainz</h1>
+            <strong><h1>Innenstadt</h1></strong>
             <h2>{data[2]} members</h2>
           </div>
         </div>
