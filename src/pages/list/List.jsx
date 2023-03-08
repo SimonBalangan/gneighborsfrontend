@@ -35,7 +35,7 @@ const List = () => {
             ) : (
               <>
               {/* Hier wird die Item-Liste geladen */}
-                {data.map((item) => (
+                {data.length && data.map((item) => (
                   <SearchItem item={item} key={item._id} />
                 ))}
               </>
