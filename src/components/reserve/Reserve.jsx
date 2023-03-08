@@ -1,16 +1,16 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 
-import "./reserve.css";
-import useFetch from "../../hooks/useFetch";
-import { useContext, useState } from "react";
-import { SearchContext } from "../../context/SearchContext";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import './reserve.css';
+import useFetch from '../../hooks/useFetch';
+import { useContext, useState } from 'react';
+import { SearchContext } from '../../context/SearchContext';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Reserve = ({ setOpen, hotelId }) => {
   const [selectedRooms, setSelectedRooms] = useState([]);
-  const { data, loading, error } = useFetch(`https://gneighbors-backend.onrender.com/api/hotels/room/${hotelId}`);
+  const { data, loading, error } = useFetch(`${process.env.REACT_APP_API}/api/hotels/room/${hotelId}`);
   // const { data, loading, error } = useFetch(`/products/room/${hotelId}`);
   const { dates } = useContext(SearchContext);
 
@@ -33,22 +33,16 @@ const Reserve = ({ setOpen, hotelId }) => {
   const alldates = getDatesInRange(dates[0].startDate, dates[0].endDate);
 
   //Funktion zur Überprüfung ob as Product available ist
-  const isAvailable = (roomNumber) => {
-    const isFound = roomNumber.unavailableDates.some((date) =>
-      alldates.includes(new Date(date).getTime())
-    );
+  const isAvailable = roomNumber => {
+    const isFound = roomNumber.unavailableDates.some(date => alldates.includes(new Date(date).getTime()));
 
     return !isFound;
   };
 
-  const handleSelect = (e) => {
+  const handleSelect = e => {
     const checked = e.target.checked;
     const value = e.target.value;
-    setSelectedRooms(
-      checked
-        ? [...selectedRooms, value]
-        : selectedRooms.filter((item) => item !== value)
-    );
+    setSelectedRooms(checked ? [...selectedRooms, value] : selectedRooms.filter(item => item !== value));
   };
 
   const navigate = useNavigate();
@@ -56,54 +50,42 @@ const Reserve = ({ setOpen, hotelId }) => {
   const handleClick = async () => {
     try {
       await Promise.all(
-        selectedRooms.map((roomId) => {
-          const res = axios.put(`https://gneighbors-backend.onrender.com/api/rooms/availability/${roomId}`, {
-            dates: alldates,
+        selectedRooms.map(roomId => {
+          const res = axios.put(`${process.env.REACT_APP_API}/api/rooms/availability/${roomId}`, {
+            dates: alldates
           });
           return res.data;
         })
       );
       setOpen(false);
-      navigate("/");
+      navigate('/');
     } catch (err) {}
   };
 
-
-
   return (
-
-    <div className="reserve">
-      <div className="rContainer">
-        <FontAwesomeIcon
-          icon={faCircleXmark}
-          className="rClose"
-          onClick={() => setOpen(false)}
-        />
+    <div className='reserve'>
+      <div className='rContainer'>
+        <FontAwesomeIcon icon={faCircleXmark} className='rClose' onClick={() => setOpen(false)} />
         <span>Select your product:</span>
-        {data.length && data.map((item) => (
-          <div className="rItem" key={item._id}>
-            <div className="rItemInfo">
-              <div className="rTitle">{item.title}</div>
-              
-              <div className="rPrice">by {item.name}</div>
+        {data.length &&
+          data.map(item => (
+            <div className='rItem' key={item._id}>
+              <div className='rItemInfo'>
+                <div className='rTitle'>{item.title}</div>
+
+                <div className='rPrice'>by {item.name}</div>
+              </div>
+              <div className='rSelectRooms'>
+                {item.roomNumbers.map(roomNumber => (
+                  <div className='room'>
+                    <label>{roomNumber.number}</label>
+                    <input type='checkbox' value={roomNumber._id} onChange={handleSelect} disabled={!isAvailable(roomNumber)} className='checkbox' />
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="rSelectRooms">
-              {item.roomNumbers.map((roomNumber) => (
-                <div className="room">
-                  <label>{roomNumber.number}</label>
-                  <input
-                    type="checkbox"
-                    value={roomNumber._id}
-                    onChange={handleSelect}
-                    disabled={!isAvailable(roomNumber)}
-                    className='checkbox'
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
-        <button onClick={handleClick} className="rButton">
+          ))}
+        <button onClick={handleClick} className='rButton'>
           Reserve Now!
         </button>
       </div>
