@@ -8,6 +8,7 @@ import gnlogo1 from './images/gnlogo1.png'
 import gnlogo2 from './images/gnlogo2.png'
 import gnlogo3 from './images/gnlogo3.png'
 import gnlogo4 from './images/gnlogo4.png'
+import logoHeader from './images/logoHeader.png'
 
 const Navbar = () => {
   const { user } = useContext(AuthContext);
@@ -32,35 +33,52 @@ const Navbar = () => {
             </h1> */}
           </Link>
           <div className="navBoxes">
-          <div className="navItems">
-            <Link to='/login'>
+          {/* <div className="navItems">
+            <Link to='/about'>
                 <button className="navButton">About</button>
             </Link>
           </div>
           <div className="navItems">
-            <Link to='/login'>
+            <Link to='/help'>
                 <button className="navButton">Help</button>
             </Link>
           </div>
           <div className="navItems">
-            <Link to='/login'>
+            <Link to='/contact'>
                 <button className="navButton">Contact</button>
+            </Link>
+          </div> */}
+          <div className="navItems">
+            <Link to='/contact'>
+                <button className="navButton">Register</button>
+            </Link>
+          </div>
+          <div className="navItems">
+            <Link to='/login'>
+                <button className="navButton">Login</button>
             </Link>
           </div>
       <div className="userName">
-      <h3 className="userNameWelcome">WELCOME</h3>
-      {user ? user.username : (
+      {user && user.username}
+          {/* <div className="navItems">
+            <button className="navButton">Register</button>
+            <Link to='/login'>
+              <button className="navButton">Login</button>
+            </Link> */}
+          </div>
+        
+        {/* {user ? user.username : (
           <div className="navItems">
             <button className="navButton">Register</button>
             <Link to='/login'>
               <button className="navButton">Login</button>
             </Link>
           </div>
-        )}
+        )} */}
       </div>
     </div>
     </div>
-    </div>
+    
   )
 }
 

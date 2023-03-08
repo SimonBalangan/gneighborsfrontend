@@ -72,6 +72,7 @@ const Header = () => {
                 Sign in / Register
               </button> </Link>
               } */}
+          
             <div className="headerSearch">
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faQuestion} className="headerIcon" />
