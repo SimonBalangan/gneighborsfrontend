@@ -20,7 +20,7 @@ const List = () => {
   
   //Fetch der Daten für die Bezirke noch unter CITY
   const { data, loading, error } = useFetch(
-    `/hotels?city=${destination}&name=${product}`);
+    `https://gneighbors-backend.onrender.com/api/hotels?city=${destination}&name=${product}`);
     
     const navigate = useNavigate();
 

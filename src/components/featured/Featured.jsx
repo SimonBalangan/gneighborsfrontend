@@ -3,8 +3,8 @@ import useFetch from "../../hooks/useFetch";
 
 const Featured = () => {
   const { data, loading, error } = useFetch(
-    
-    "/hotels/countByCity?cities=Neustadt,Altstadt,Mainz"
+    "https://gneighbors-backend.onrender.com/api/hotels/countByCity?cities=Neustadt,Altstadt,Mainz"
+    // "/hotels/countByCity?cities=Neustadt,Altstadt,Mainz"
   );
   
   return (

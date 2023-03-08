@@ -2,7 +2,7 @@ import useFetch from "../../hooks/useFetch";
 import "./propertyList.css";
 
 const PropertyList = () => {
-  const { data, loading, error } = useFetch("/hotels/countByType");
+  const { data, loading, error } = useFetch("https://gneighbors-backend.onrender.com/api/hotels/countByType");
   // const { data, loading, error } = useFetch("/products/countByType");
 
   const images = [
