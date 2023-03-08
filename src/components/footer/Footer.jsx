@@ -25,7 +25,10 @@ const Footer = () => {
           </Link>
        
         <ul className="fList">
-          <li className="fListItem">Curtomer Service</li>
+        {/* <li className="fListItem">
+        <a href="https://www.pathfinders.design/en/about#show5" className="egg">Meeh, tell me more...</a>
+        </li> */}
+          <li className="fListItem">Jobs</li>
           <li className="fListItem">Partner Help</li>
           <li className="fListItem">Careers</li>
           <li className="fListItem">Sustainability</li>
@@ -36,7 +39,10 @@ const Footer = () => {
           <li className="fListItem">Press center</li>
           <li className="fListItem">Safety Resource Center</li>
           <li className="fListItem">Investor relations</li>
-          <li className="fListItem">Terms & conditions</li>
+          <li className="fListItem">⇩</li>
+          <li className="fListItem">
+        <a href="https://www.pathfinders.design/en/about#show5" className="egg">Meeh, tell me more...</a>
+        </li>
         </ul>
       </div>
       <div className="fText">Copyright © 2023 Good Neighbors.</div>

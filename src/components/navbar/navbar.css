@@ -87,9 +87,9 @@ margin: 5px;
   align-items: center;
 }
 .userName{
-  font-size: 28px;
-  margin: 0 10px 0 10px;
-  padding: 8px 16px;
+    font-size: 28px;
+    margin: 0 10px 0 10px;
+    padding: 8px 16px;
     border: none;
     
     border-radius: 100px;
