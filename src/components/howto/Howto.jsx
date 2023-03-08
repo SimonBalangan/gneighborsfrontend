@@ -31,7 +31,7 @@ const HowTo = () => {
         <span className="howToDesc">Borrow</span>
       <div className="pList">
           {
-            images.map((img,i) => (
+            images.length && images.map((img,i) => (
               <div className="pListItem" key={i}>
                 <img
                   src={img}

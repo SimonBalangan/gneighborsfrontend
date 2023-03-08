@@ -80,7 +80,7 @@ const Reserve = ({ setOpen, hotelId }) => {
           onClick={() => setOpen(false)}
         />
         <span>Select your product:</span>
-        {data.map((item) => (
+        {data.length && data.map((item) => (
           <div className="rItem" key={item._id}>
             <div className="rItemInfo">
               <div className="rTitle">{item.title}</div>

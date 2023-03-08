@@ -110,7 +110,7 @@ console.log(dates)
         <div className="hotelWrapper">
         
           <div className="hotelImages">
-            {data.photos?.map((photo, i) => (
+            {data.photos.length && data.photos?.map((photo, i) => (
             <div className="hotelImgWrapper" key={i}>
               <img
                 onClick={() => handleOpen(i)}
