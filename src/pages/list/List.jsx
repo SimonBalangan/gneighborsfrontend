@@ -24,9 +24,11 @@ const List = () => {
   const navigate = useNavigate();
 
   return (
-    <div className='list-container'>
+    <div>
       <Navbar />
       <Header />
+    <div className='list-container'>
+      
       <div className='listResult'>
         {loading ? (
           'loading'
@@ -38,6 +40,7 @@ const List = () => {
         )}
       </div>
       <Footer />
+    </div>
     </div>
   );
 };

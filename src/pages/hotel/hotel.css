@@ -16,7 +16,7 @@
 
   border: 1px solid #10dd46; */
   border: 2px solid #febb02;
-  padding: 50px;
+  padding: 35px;
   border-radius: 5px;
   display: flex;
   justify-content:space-around;
@@ -40,7 +40,7 @@
 }
 
 .hotelTitle {
-  font-size: 24px;
+  font-size: 42px;
   color: #0071c2;
   gap: 10px;
 }
@@ -88,14 +88,14 @@
 .hotelDetails {
   display: flex;
   justify-content: space-between;
-  gap: 200px;
+  gap: 400px;
   margin-top: 20px;
 }
 
 .hotelDetailsTexts {
   flex: 3;
   padding-right: 50px;
-  margin-top: 30px;
+  margin-top: -15px;
 }
 
 .hotelDesc {

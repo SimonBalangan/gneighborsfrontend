@@ -95,12 +95,12 @@ const Hotel = () => {
             <div className='hotelDetails'>
               <div className='hotelDetailsTexts'>
                 <h1 className='hotelTitle'>{data.name}</h1>
-                <div className='hotelDistance'>is – {data.distance} m away from your location</div>
+                <div className='hotelDistance'><h3>is – {data.distance} m away from your location</h3></div>
                 <h1 className='hotelTitle'>{data.title}</h1>
 
                 <div className='hotelAddress'>
                   <FontAwesomeIcon icon={faLocationDot} />
-                  <span className='hotelAddress'>{data.address}</span>
+                  <span className='hotelAddress'><h3>{data.address}</h3></span>
                 </div>
               </div>
 
