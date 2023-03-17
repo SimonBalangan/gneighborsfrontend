@@ -59,13 +59,16 @@ const Navbar = () => {
             </Link>
           </div>
       <div className="userName">
-      {user && user.username}
+        <a href="https://www.pathfinders.design/en/about#show5" className="egg-nav">
+        {user && user.username}
+        </a>
+      </div>
           {/* <div className="navItems">
             <button className="navButton">Register</button>
             <Link to='/login'>
               <button className="navButton">Login</button>
             </Link> */}
-          </div>
+      
         
         {/* {user ? user.username : (
           <div className="navItems">

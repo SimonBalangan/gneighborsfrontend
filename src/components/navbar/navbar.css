@@ -115,3 +115,14 @@ margin: 5px;
     text-align: center;
     background-color: aquamarine;
 } */
+
+.egg-nav{
+  text-decoration: none;
+ 
+  border: none;
+  
+  border-radius: 100px;
+  color: rgb(254, 254, 254);
+  font-size: 18px;
+  
+}

@@ -1,3 +1,9 @@
+
+
+/* *{
+  font-family: 'Dosis', sans-serif !important;
+} */
+
 .header {
   background-image: url(./images/bgHeader.jpg);
   background-size: cover;
@@ -6,8 +12,6 @@
   display: flex;
   justify-content: center;
   position: relative;
-  
-  
   
 }
 
@@ -59,6 +63,7 @@
 
 .headerSearch {
   /* font-size: 22px; */
+  font-family: 'Dosis', sans-serif !important;
   height: 42px;
   background-color: white;
   border: 4px solid #febb02;
@@ -81,21 +86,24 @@
 .headerSearchItem {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 22px;
+  font-family: 'Dosis', sans-serif !important;
 }
 
 .headerSearchInput {
   border: none;
   outline: none;
-  font-size: 28px;
+  font-size: 22px;
   width: 220px;
+  font-family: 'Dosis', sans-serif !important;
 }
 
 .headerSearchText {
   color: rgb(56, 56, 56);
   cursor: pointer;
-  font-size: 22px;
-  
+  font-size: 20px;
+  font-family: 'Dosis', sans-serif !important;
+
 }
 
 .date {

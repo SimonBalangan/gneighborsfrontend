@@ -29,6 +29,7 @@ const Footer = () => {
         <a href="https://www.pathfinders.design/en/about#show5" className="egg">Meeh, tell me more...</a>
         </li> */}
           <li className="fListItem">Jobs</li>
+          <li className="fListItem">Jobs</li>
           <li className="fListItem">Partner Help</li>
           <li className="fListItem">Careers</li>
           <li className="fListItem">Sustainability</li>
@@ -41,8 +42,8 @@ const Footer = () => {
           <li className="fListItem">Investor relations</li>
           <li className="fListItem">⇩</li>
           <li className="fListItem">
-        <a href="https://www.pathfinders.design/en/about#show5" className="egg">Meeh, tell me more...</a>
-        </li>
+            <a href="https://www.pathfinders.design/en/about#show5" className="egg">Meeh, tell me more...</a>
+          </li>
         </ul>
       </div>
       <div className="fText">Copyright © 2023 Good Neighbors.</div>
@@ -51,3 +52,7 @@ const Footer = () => {
 };
 
 export default Footer;
+
+          <li className="egg-container">
+            <a href="https://www.pathfinders.design/en/about#show5" className="egg">Meeh, tell me more...</a>
+          </li>
